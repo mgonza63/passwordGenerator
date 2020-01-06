@@ -22,21 +22,38 @@
         var numbers = "0123456789";
         var special = "!@#$%&*-_+=?;:.,";
 
-        
-
         var length = prompt("How long would you like your password to be? (between 8 and 20 characters)");
 
         var numRequest = confirm("Do you want numbers in your password?")
         var specialRequest = confirm("Do you want special characters in  your password?")
 
-        if (numRequest && specialRequest){
+        if (numRequest){
             var characters = letters;
             characters += numbers;
-            characters += special;
-            
 
             generatePassword()
         }
+
+        else if (specialRequest){
+            characters += letters;
+            characters += special;
+
+            generatePassword()
+        }
+
+        if (numRequest && specialRequest){
+            characters += letters;
+            characters += special;
+            characters += numbers;
+    
+            generatePassword()
+        }
+
+        else{
+            characters += letters;
+
+            generatePassword()
+        };
 
         function generatePassword() {
             password ="";
@@ -47,8 +64,6 @@
         }
 
         console.log("The password is", password)
-    </script>
-    
 
-    
+    </script>
 </html>
