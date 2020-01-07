@@ -5,72 +5,41 @@
      <title>Password Generator</title>
      <link rel="stylesheet" type="text/css" href="assets/style.css" >
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     
 
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <h1>Generate a Password</h1>
-                <hr>
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-6">
+                    <h1>Password Generator</h1>
+                </div>
             </div>
         </div>
-        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12"><hr></div>
+            </div>
+        </div>
+        <div class="container"id="card">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Generate Password</h2>
+                    <hr>
+            <div class="row">
+                <div class="col-sm-12" id="input">Your Safe Password</div>
+            </div>
+                    <button id="genButton">Generate Password</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </body>
+    <script src="script.js"></script>
 
-    <script>
-        var letters = "abcdefghijklmnopqrstuvwxyzABDCEFGHIJKLMNOPQRSTUVWXYZ";
-        var numbers = "0123456789";
-        var special = "!@#$%&*-_+=?;:.,";
-
-        var length = prompt("How long would you like your password to be? (between 8 and 128 characters)");
-
-        while (length < 8 || length > 128){
-            alert("password must be between 8 and 128 characters");
-            var length = prompt("How long would you like your password to be? (between 8 and 128 characters)");
-        }
-
-        var numRequest = confirm("Do you want numbers in your password?")
-        var specialRequest = confirm("Do you want special characters in  your password?")
-
-        
-
-        if (numRequest){
-            var characters = letters;
-            characters += numbers;
-
-            generatePassword()
-        }
-
-        else if (specialRequest){
-            characters += letters;
-            characters += special;
-
-            generatePassword()
-        }
-
-        if (numRequest && specialRequest){
-            characters += letters;
-            characters += special;
-            characters += numbers;
-    
-            generatePassword()
-        }
-
-        else{
-            characters += letters;
-
-            generatePassword()
-        };
-
-        function generatePassword() {
-            password ="";
-            for (var i = 0, n = characters.length; i < length; ++i) {
-                password += characters.charAt(Math.floor(Math.random() * n));
-            }
-            return password; 
-        }
-
-        console.log("The password is", password)
-
-    </script>
 </html>

@@ -1,9 +1,24 @@
-hr {
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
+#card{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
     border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    color: hsl(206, 17%, 28%);
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 40px;
+}
+
+#input{
+    text-align: center;
+    color: lightgray;
+    border: 2px;
+    padding: 10px;
+    border-color: lightgrey;
+    border-style: dashed;
+}
+
+#genButton{
+    margin-top: 10px;
 }
