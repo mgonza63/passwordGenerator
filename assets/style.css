@@ -10,9 +10,9 @@
     padding: 30px 40px;
 }
 
-#input{
+#password{
     text-align: center;
-    color: lightgray;
+    color: gray;
     border: 2px;
     padding: 10px;
     border-color: lightgrey;
@@ -21,4 +21,40 @@
 
 #genButton{
     margin-top: 10px;
+    border: none;
+    background-color: hsl(360, 91%, 36%);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#copyButton{
+
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(248, 138, 138);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 150px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+
+
+}
+#pwd{
+  border: none;
 }

@@ -1,7 +1,9 @@
 
-var genButton = document.getElementById("genButton");
+var genButton = document.querySelector("#genButton");
+var inputPwd = document.querySelector("#pwd");
 
-genButton.addEventListener("click", askPassword)
+genButton.addEventListener("click", askPassword);
+
 
 function askPassword(){
 
@@ -11,13 +13,15 @@ function askPassword(){
 
     var length = prompt("How long would you like your password to be? (between 8 and 128 characters)");
 
-    while (length < 8 || length > 128){
+
+    while (length < 8 || length > 128) {
         alert("password must be between 8 and 128 characters");
-        var length = prompt("How long would you like your password to be? (between 8 and 128 characters)");
+        length = prompt("How long would you like your password to be? (between 8 and 128 characters)");
+
     }
 
-    var numRequest = confirm("Do you want numbers in your password?")
-    var specialRequest = confirm("Do you want special characters in your password?")
+    var numRequest = confirm("Do you want numbers in your password?");
+    var specialRequest = confirm("Do you want special characters in your password?");
 
 
 
@@ -26,6 +30,7 @@ function askPassword(){
         characters += numbers;
 
         generatePassword()
+        inputPwd.textContent = password;
     }
 
     else if (specialRequest){
@@ -33,6 +38,7 @@ function askPassword(){
         characters += special;
 
         generatePassword()
+        inputPwd.textContent = password;
     }
 
     if (numRequest && specialRequest){
@@ -41,12 +47,14 @@ function askPassword(){
         characters += numbers;
 
         generatePassword()
+        inputPwd.textContent = password;
     }
 
     else{
         characters += letters;
 
         generatePassword()
+        inputPwd.textContent = password;
     };
 
     function generatePassword() {
@@ -54,8 +62,10 @@ function askPassword(){
         for (var i = 0, n = characters.length; i < length; ++i) {
             password += characters.charAt(Math.floor(Math.random() * n));
         }
-        return password; 
+        return password;
+        
     }
 
     console.log("The password is", password);
-}
+
+    }
