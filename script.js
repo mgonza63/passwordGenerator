@@ -13,7 +13,9 @@ function askPassword(){
 
     var length = prompt("How long would you like your password to be? (between 8 and 128 characters)");
 
-
+    if (length === null){
+        return;
+    }
     while (length < 8 || length > 128) {
         alert("password must be between 8 and 128 characters");
         length = prompt("How long would you like your password to be? (between 8 and 128 characters)");
